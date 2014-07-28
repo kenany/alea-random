@@ -10,7 +10,7 @@ instead of `Math.random`.
 
 ## Example
 
-```js
+``` javascript
 var aleaRandom = require('alea-random');
 
 aleaRandom(0, 5);
@@ -33,6 +33,10 @@ $ npm install alea-random
 ```
 
 ## API
+
+``` javascript
+var aleaRandom = require('alea-random');
+```
 
 ### `aleaRandom([min=0], [max=1], [floating=false])`
 
