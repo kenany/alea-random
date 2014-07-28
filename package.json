@@ -1,0 +1,39 @@
+{
+  "name": "alea-random",
+  "version": "0.0.0",
+  "description": "`lodash.random` but using Alea",
+  "keywords": [
+    "alea",
+    "math",
+    "random"
+  ],
+  "repository": "KenanY/alea-random",
+  "license": "MIT",
+  "author": "Kenan Yildirim <kenan@kenany.me> (http://kenany.me/)",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE.txt"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "dependencies": {
+    "alea": "^0.0.9",
+    "lodash.isboolean": "^2.4.1",
+    "lodash.isnumber": "^2.4.1",
+    "lodash.isstring": "^2.4.1"
+  },
+  "devDependencies": {
+    "lodash.constant": "^2.4.1",
+    "lodash.every": "^2.4.1",
+    "lodash.isfunction": "^2.4.1",
+    "lodash.map": "^2.4.1",
+    "lodash.some": "^2.4.1",
+    "lodash.uniq": "^2.4.1",
+    "tape": "^2.13.4"
+  }
+}
