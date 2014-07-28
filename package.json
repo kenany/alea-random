@@ -25,7 +25,8 @@
     "alea": "^0.0.9",
     "lodash.isboolean": "^2.4.1",
     "lodash.isnumber": "^2.4.1",
-    "lodash.isstring": "^2.4.1"
+    "lodash.isstring": "^2.4.1",
+    "node-uuid": "^1.4.1"
   },
   "devDependencies": {
     "lodash.constant": "^2.4.1",

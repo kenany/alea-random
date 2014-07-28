@@ -2,6 +2,7 @@ var Alea = require('alea');
 var isNumber = require('lodash.isnumber');
 var isString = require('lodash.isstring');
 var isBoolean = require('lodash.isboolean');
+var uuid = require('node-uuid');
 
 /**
  * Produces a random number between `min` and `max` (inclusive). If only one
@@ -28,7 +29,7 @@ var isBoolean = require('lodash.isboolean');
  * // => a floating-point number between 1.2 and 5.2
  */
 function aleaRandom(min, max, floating) {
-  var gen = new Alea();
+  var gen = new Alea(uuid.v4());
 
   if ((isNumber(max) || isString(max)) && floating && floating[max] === min) {
     max = floating = null;
