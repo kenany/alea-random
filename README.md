@@ -6,6 +6,8 @@
 `lodash.random` but using [Alea](https://github.com/coverslide/node-alea)
 instead of `Math.random`.
 
+[![Browser Support](https://ci.testling.com/KenanY/alea-random.png)](https://ci.testling.com/KenanY/alea-random)
+
 ## Example
 
 ```js
