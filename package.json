@@ -1,6 +1,6 @@
 {
   "name": "alea-random",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "`lodash.random` but using Alea",
   "keywords": [
     "alea",
