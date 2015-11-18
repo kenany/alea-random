@@ -26,7 +26,7 @@
     "lodash.isboolean": "^3.0.0",
     "lodash.isnumber": "^3.0.0",
     "lodash.isstring": "^3.0.0",
-    "node-uuid": "KenanY/node-uuid"
+    "node-uuid": "^1.4.7"
   },
   "devDependencies": {
     "lodash.constant": "^3.0.0",
