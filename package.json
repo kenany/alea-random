@@ -19,7 +19,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/index.js"
+    "test": "tape test/index.js",
+    "test-browser": "browserify test/index.js | tape-run"
   },
   "dependencies": {
     "alea": "^0.0.9",
@@ -29,12 +30,14 @@
     "node-uuid": "^1.4.7"
   },
   "devDependencies": {
+    "browserify": "^12.0.1",
     "lodash.constant": "^3.0.0",
     "lodash.every": "^3.0.0",
     "lodash.isfunction": "^3.0.1",
     "lodash.map": "^3.0.0",
     "lodash.some": "^3.0.0",
     "lodash.uniq": "^3.0.1",
-    "tape": "^3.0.3"
+    "tape": "^3.0.3",
+    "tape-run": "^2.1.0"
   }
 }
