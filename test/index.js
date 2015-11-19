@@ -34,10 +34,14 @@ test('supports a `min` and `max` argument', function(t) {
   }));
 });
 
-test('supports not providing a `max` argument', function(t) {
+test('supports not providing a `min` argument', function(t) {
   t.plan(1);
+
+  var max = 5;
+
   t.ok(some(array, function() {
-    return aleaRandom(5) !== 5;
+    var result = aleaRandom(max);
+    return result >= 0 && result <= max;
   }));
 });
 
