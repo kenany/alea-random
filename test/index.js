@@ -22,6 +22,18 @@ test('returns `0` or `1` when arguments are not provided', function(t) {
   t.deepEqual(uniq(actual).sort(), [0, 1]);
 });
 
+test('supports a `min` and `max` argument', function(t) {
+  t.plan(1);
+
+  var min = 5;
+  var max = 10;
+
+  t.ok(some(array, function() {
+    var result = aleaRandom(min, max);
+    return result >= min && result <= max;
+  }));
+});
+
 test('supports not providing a `max` argument', function(t) {
   t.plan(1);
   t.ok(some(array, function() {
