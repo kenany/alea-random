@@ -47,11 +47,15 @@ test('supports not providing a `min` argument', function(t) {
 
 test('supports large integer values', function(t) {
   t.plan(2);
+
   var min = Math.pow(2, 31);
   var max = Math.pow(2, 62);
+
   t.ok(every(array, function() {
-    return aleaRandom(min, max) >= min;
+    var result = aleaRandom(min, max);
+    return result >= min && result <= max;
   }));
+
   t.ok(some(array, function() {
     return aleaRandom(Number.MAX_VALUE) > 0;
   }));
