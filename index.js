@@ -1,6 +1,5 @@
 var Alea = require('alea');
-var isNumber = require('lodash.isnumber');
-var isString = require('lodash.isstring');
+var isIterateeCall = require('lodash._isiterateecall');
 var isBoolean = require('lodash.isboolean');
 var uuid = require('node-uuid');
 
@@ -31,7 +30,7 @@ var uuid = require('node-uuid');
 function aleaRandom(min, max, floating) {
   var gen = new Alea(uuid.v4());
 
-  if ((isNumber(max) || isString(max)) && floating && floating[max] === min) {
+  if (floating && isIterateeCall(min, max, floating)) {
     max = floating = null;
   }
 
