@@ -1,18 +1,22 @@
 var Alea = require('alea');
 var isIterateeCall = require('lodash._isiterateecall');
-var isBoolean = require('lodash.isboolean');
+var toNumber = require('lodash.tonumber');
 var uuid = require('node-uuid');
 
 /**
- * Produces a random number between `min` and `max` (inclusive). If only one
- * argument is provided a number between `0` and the given number will be
- * returned. If `floating` is truey or either `min` or `max` are floats a
- * floating-point number will be returned instead of an integer.
+ * Produces a random number between the inclusive `min` and `max` bounds.
+ * If only one argument is provided a number between `0` and the given number
+ * is returned. If `floating` is `true`, or either `min` or `max` are floats,
+ * a floating-point number is returned instead of an integer.
  *
- * @param {Number} [min=0] The minimum possible value.
- * @param {Number} [max=1] The maximum possible value.
- * @param {Boolean} [floating=false] Specify returning a floating-point number.
- * @returns {Number} Returns a random number.
+ * **Note:** JavaScript follows the IEEE-754 standard for resolving
+ * floating-point values which can produce unexpected results.
+ *
+ * @static
+ * @param {number} [min=0] The lower bound.
+ * @param {number} [max=1] The upper bound.
+ * @param {boolean} [floating] Specify returning a floating-point number.
+ * @returns {number} Returns the random number.
  * @example
  *
  * aleaRandom(0, 5);
@@ -30,37 +34,33 @@ var uuid = require('node-uuid');
 function aleaRandom(min, max, floating) {
   var gen = new Alea(uuid.v4());
 
-  if (floating && isIterateeCall(min, max, floating)) {
-    max = floating = null;
+  if (floating && typeof floating != 'boolean' && isIterateeCall(min, max, floating)) {
+    max = floating = undefined;
   }
 
-  var noMin = min == null;
-  var noMax = max == null;
-
-  if (floating == null) {
-    if (noMax && isBoolean(min)) {
-      floating = min;
-      min = 1;
-    }
-    else if (isBoolean(max)) {
+  if (floating === undefined) {
+    if (typeof max == 'boolean') {
       floating = max;
-      noMax = true;
+      max = undefined;
+    }
+    else if (typeof min == 'boolean') {
+      floating = min;
+      min = undefined;
     }
   }
 
-  if (noMin && noMax) {
-    max = 1;
-    noMax = false;
-  }
-
-  min = +min || 0;
-
-  if (noMax) {
-    max = min;
+  if (min === undefined && max === undefined) {
     min = 0;
+    max = 1;
   }
   else {
-    max = +max || 0;
+    min = toNumber(min) || 0;
+    if (max === undefined) {
+      max = min;
+      min = 0;
+    } else {
+      max = toNumber(max) || 0;
+    }
   }
 
   if (min > max) {
@@ -71,7 +71,7 @@ function aleaRandom(min, max, floating) {
 
   if (floating || min % 1 || max % 1) {
     var rand = gen();
-    return Math.min(min + (rand * (max - min + parseFloat('1e-' + (String(rand).length - 1)))), max);
+    return Math.min(min + (rand * (max - min + parseFloat('1e-' + ((rand + '').length - 1)))), max);
   }
 
   return min + Math.floor(gen() * (max - min + 1));

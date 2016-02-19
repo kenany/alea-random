@@ -76,8 +76,9 @@ test('supports large integer values', function(t) {
 });
 
 test('coerces arguments to numbers', function(t) {
-  t.plan(1);
+  t.plan(2);
   t.equal(aleaRandom('1', '1'), 1);
+  t.equal(aleaRandom(NaN, NaN), 0);
 });
 
 test('supports floats', function(t) {
