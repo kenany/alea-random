@@ -35,7 +35,7 @@
     "lodash.isfunction": "^3.0.1",
     "lodash.map": "^4.2.0",
     "lodash.some": "^4.2.0",
-    "lodash.uniq": "^3.0.1",
+    "lodash.uniq": "^4.2.0",
     "tape": "^4.2.2",
     "tape-run": "^2.1.0"
   }
