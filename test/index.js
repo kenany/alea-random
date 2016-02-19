@@ -45,6 +45,20 @@ test('supports not providing a `min` argument', function(t) {
   }));
 });
 
+test('swaps `min` and `max` if `min > max`', function(t) {
+  t.plan(1);
+
+  var min = 4;
+  var max = 2;
+  var expected = [2, 3, 4];
+
+  var actual = uniq(map(array, function() {
+    return aleaRandom(min, max);
+  })).sort();
+
+  t.deepEqual(actual, expected);
+});
+
 test('supports large integer values', function(t) {
   t.plan(2);
 

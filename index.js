@@ -63,6 +63,12 @@ function aleaRandom(min, max, floating) {
     max = +max || 0;
   }
 
+  if (min > max) {
+    var temp = min;
+    min = max;
+    max = temp;
+  }
+
   if (floating || min % 1 || max % 1) {
     var rand = gen();
     return Math.min(min + (rand * (max - min + parseFloat('1e-' + (String(rand).length - 1)))), max);
