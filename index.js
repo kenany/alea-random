@@ -1,7 +1,7 @@
 var Alea = require('alea');
 var isIterateeCall = require('lodash._isiterateecall');
 var toNumber = require('lodash.tonumber');
-var uuid = require('node-uuid');
+var uuid = require('uuid');
 
 /**
  * Produces a random number between the inclusive `min` and `max` bounds.

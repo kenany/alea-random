@@ -26,7 +26,7 @@
     "alea": "^0.0.9",
     "lodash._isiterateecall": "^3.0.9",
     "lodash.tonumber": "^4.0.1",
-    "node-uuid": "^1.4.7"
+    "uuid": "^3.0.0"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
