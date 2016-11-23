@@ -19,7 +19,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/index.js",
+    "lint": "eslint *.js test/*.js",
+    "tests-only": "tape test/index.js",
+    "coverage": "nyc npm run -s tests-only",
+    "pretest": "npm run -s lint",
+    "test": "npm run -s tests-only",
     "test-browser": "browserify test/index.js | tape-run"
   },
   "dependencies": {
@@ -29,13 +33,16 @@
     "uuid": "^3.0.0"
   },
   "devDependencies": {
+    "@kenan/eslint-config": "^4.0.0",
     "browserify": "^13.0.0",
+    "eslint": "^3.10.2",
     "lodash.constant": "^3.0.0",
     "lodash.every": "^4.2.0",
     "lodash.isfunction": "^3.0.1",
     "lodash.map": "^4.2.0",
     "lodash.some": "^4.2.0",
     "lodash.uniq": "^4.2.0",
+    "nyc": "^10.0.0",
     "tape": "^4.2.2",
     "tape-run": "^2.1.0"
   }

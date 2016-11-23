@@ -109,7 +109,7 @@ test('works when used as a callback for `map`', function(t) {
   var expected = map(array, constant(true));
 
   actual = map(actual, function(result, index) {
-    return result >= 0 && result <= array[index] && (result % 1) == 0;
+    return result >= 0 && result <= array[index] && (result % 1) === 0;
   });
 
   t.deepEqual(actual, expected);

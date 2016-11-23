@@ -34,16 +34,16 @@ var uuid = require('uuid');
 function aleaRandom(min, max, floating) {
   var gen = new Alea(uuid.v4());
 
-  if (floating && typeof floating != 'boolean' && isIterateeCall(min, max, floating)) {
+  if (floating && typeof floating !== 'boolean' && isIterateeCall(min, max, floating)) {
     max = floating = undefined;
   }
 
   if (floating === undefined) {
-    if (typeof max == 'boolean') {
+    if (typeof max === 'boolean') {
       floating = max;
       max = undefined;
     }
-    else if (typeof min == 'boolean') {
+    else if (typeof min === 'boolean') {
       floating = min;
       min = undefined;
     }
@@ -58,7 +58,8 @@ function aleaRandom(min, max, floating) {
     if (max === undefined) {
       max = min;
       min = 0;
-    } else {
+    }
+    else {
       max = toNumber(max) || 0;
     }
   }
