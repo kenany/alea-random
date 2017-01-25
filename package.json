@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@kenan/eslint-config": "^4.0.0",
-    "browserify": "^13.0.0",
+    "browserify": "^14.0.0",
     "eslint": "^3.10.2",
     "lodash.constant": "^3.0.0",
     "lodash.every": "^4.2.0",
