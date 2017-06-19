@@ -42,7 +42,7 @@
     "lodash.map": "^4.2.0",
     "lodash.some": "^4.2.0",
     "lodash.uniq": "^4.2.0",
-    "nyc": "^10.0.0",
+    "nyc": "^11.0.2",
     "tape": "^4.2.2",
     "tape-run": "^3.0.0"
   }
