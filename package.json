@@ -33,7 +33,7 @@
     "uuid": "^3.0.0"
   },
   "devDependencies": {
-    "@kenan/eslint-config": "^4.0.0",
+    "@kenan/eslint-config": "^5.0.0",
     "browserify": "^14.0.0",
     "eslint": "^3.10.2",
     "lodash.constant": "^3.0.0",
