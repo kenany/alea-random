@@ -6,8 +6,6 @@ matrix:
       env: LINT=true COVERAGE=true TEST=true
     - node_js: '4'
       env: TEST=true
-    - node_js: '7'
-      env: TEST=true
 before_install:
   - npm install -g npm
   - npm --version
