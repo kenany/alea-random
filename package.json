@@ -33,18 +33,18 @@
     "uuid": "^3.0.0"
   },
   "devDependencies": {
-    "@kenan/eslint-config": "^6.0.0",
+    "@kenan/eslint-config": "6.0.0",
     "@kenan/renovate-config": "1.1.1",
-    "browserify": "^16.1.0",
-    "eslint": "^5.16.0",
-    "lodash.constant": "^3.0.0",
-    "lodash.every": "^4.2.0",
-    "lodash.isfunction": "^3.0.1",
-    "lodash.map": "^4.2.0",
-    "lodash.some": "^4.2.0",
-    "lodash.uniq": "^4.2.0",
-    "nyc": "^14.0.0",
-    "tape": "^4.2.2",
-    "tape-run": "^5.0.0"
+    "browserify": "16.5.0",
+    "eslint": "5.16.0",
+    "lodash.constant": "3.0.0",
+    "lodash.every": "4.6.0",
+    "lodash.isfunction": "3.0.9",
+    "lodash.map": "4.6.0",
+    "lodash.some": "4.6.0",
+    "lodash.uniq": "4.5.0",
+    "nyc": "14.1.1",
+    "tape": "4.11.0",
+    "tape-run": "5.0.0"
   }
 }
