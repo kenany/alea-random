@@ -1,4 +1,3 @@
-var aleaRandom = require('../');
 var test = require('tape');
 var isFunction = require('lodash.isfunction');
 var map = require('lodash.map');
@@ -6,6 +5,8 @@ var uniq = require('lodash.uniq');
 var every = require('lodash.every');
 var some = require('lodash.some');
 var constant = require('lodash.constant');
+
+var aleaRandom = require('../');
 
 var array = Array(1000);
 
