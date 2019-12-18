@@ -1,7 +1,5 @@
 # alea-random
 
-[![Build Status](https://img.shields.io/travis/KenanY/alea-random.svg)](https://travis-ci.org/KenanY/alea-random)
-
 `lodash.random` but using [Alea](https://github.com/coverslide/node-alea)
 instead of `Math.random`.
 
