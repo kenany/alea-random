@@ -43,7 +43,7 @@
     "lodash.map": "4.6.0",
     "lodash.some": "4.6.0",
     "lodash.uniq": "4.5.0",
-    "nyc": "15.0.0",
+    "nyc": "15.0.1",
     "tape": "4.13.2",
     "tape-run": "6.0.1"
   }
