@@ -1,3 +1,10 @@
+### [2.1.4](https://github.com/KenanY/alea-random/compare/2.1.3...2.1.4) (2020-09-04)
+
+
+### Bug Fixes
+
+* **deps:** uuid@8.3.0 ([4cd7ffd](https://github.com/KenanY/alea-random/commit/4cd7ffdc7da71f8c996c6e5b0a8f1bd9f987d797))
+
 ### [2.1.3](https://github.com/KenanY/alea-random/compare/2.1.2...2.1.3) (2020-09-04)
 
 
