@@ -1,3 +1,10 @@
+### [2.1.3](https://github.com/KenanY/alea-random/compare/2.1.2...2.1.3) (2020-09-04)
+
+
+### Bug Fixes
+
+* **deps:** lodash.tonumber@4.0.3 ([28ba218](https://github.com/KenanY/alea-random/commit/28ba2185acb2a49a88d6353fcc6aeffaba9fe05d))
+
 ### [2.1.2](https://github.com/KenanY/alea-random/compare/2.1.1...2.1.2) (2020-06-28)
 
 
