@@ -50,6 +50,6 @@
     "nyc": "15.1.0",
     "semantic-release": "17.1.1",
     "tape-run": "8.0.0",
-    "tape": "5.0.1"
+    "tape": "5.2.2"
   }
 }
