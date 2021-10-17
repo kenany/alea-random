@@ -28,7 +28,7 @@
     "test-browser": "browserify test/index.js | tape-run"
   },
   "dependencies": {
-    "alea": "^1.0.0",
+    "alea": "^1.0.1",
     "lodash._isiterateecall": "^3.0.9",
     "lodash.tonumber": "^4.0.3",
     "uuid": "^8.3.2"
