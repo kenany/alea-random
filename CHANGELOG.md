@@ -1,3 +1,10 @@
+### [2.1.6](https://github.com/KenanY/alea-random/compare/2.1.5...2.1.6) (2021-10-17)
+
+
+### Bug Fixes
+
+* **deps:** alea@1.0.1 ([b129e6c](https://github.com/KenanY/alea-random/commit/b129e6c7412774b42824cdf326f24f6fa8ed593e))
+
 ### [2.1.5](https://github.com/KenanY/alea-random/compare/2.1.4...2.1.5) (2020-12-17)
 
 
