@@ -1,3 +1,14 @@
+## [3.0.0](https://github.com/KenanY/alea-random/compare/2.1.6...3.0.0) (2022-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v10 is no longer supported.
+
+### Features
+
+* drop Node.js v10 support ([43d4ed6](https://github.com/KenanY/alea-random/commit/43d4ed680b335c50ea920d4fcc7ddd51cba16898))
+
 ### [2.1.6](https://github.com/KenanY/alea-random/compare/2.1.5...2.1.6) (2021-10-17)
 
 
