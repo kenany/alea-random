@@ -1,14 +1,16 @@
-var test = require('tape');
-var isFunction = require('lodash.isfunction');
-var map = require('lodash.map');
-var uniq = require('lodash.uniq');
-var every = require('lodash.every');
-var some = require('lodash.some');
-var constant = require('lodash.constant');
+'use strict';
 
-var aleaRandom = require('../');
+const test = require('tape');
+const isFunction = require('lodash.isfunction');
+const map = require('lodash.map');
+const uniq = require('lodash.uniq');
+const every = require('lodash.every');
+const some = require('lodash.some');
+const constant = require('lodash.constant');
 
-var array = Array(1000);
+const aleaRandom = require('../');
+
+const array = Array(1000);
 
 test('exports a function', function(t) {
   t.plan(1);
@@ -17,7 +19,7 @@ test('exports a function', function(t) {
 
 test('returns `0` or `1` when arguments are not provided', function(t) {
   t.plan(1);
-  var actual = map(array, function() {
+  const actual = map(array, function() {
     return aleaRandom();
   });
   t.deepEqual(uniq(actual).sort(), [0, 1]);
@@ -26,11 +28,11 @@ test('returns `0` or `1` when arguments are not provided', function(t) {
 test('supports a `min` and `max` argument', function(t) {
   t.plan(1);
 
-  var min = 5;
-  var max = 10;
+  const min = 5;
+  const max = 10;
 
   t.ok(some(array, function() {
-    var result = aleaRandom(min, max);
+    const result = aleaRandom(min, max);
     return result >= min && result <= max;
   }));
 });
@@ -38,10 +40,10 @@ test('supports a `min` and `max` argument', function(t) {
 test('supports not providing a `min` argument', function(t) {
   t.plan(1);
 
-  var max = 5;
+  const max = 5;
 
   t.ok(some(array, function() {
-    var result = aleaRandom(max);
+    const result = aleaRandom(max);
     return result >= 0 && result <= max;
   }));
 });
@@ -49,11 +51,11 @@ test('supports not providing a `min` argument', function(t) {
 test('swaps `min` and `max` if `min > max`', function(t) {
   t.plan(1);
 
-  var min = 4;
-  var max = 2;
-  var expected = [2, 3, 4];
+  const min = 4;
+  const max = 2;
+  const expected = [2, 3, 4];
 
-  var actual = uniq(map(array, function() {
+  const actual = uniq(map(array, function() {
     return aleaRandom(min, max);
   })).sort();
 
@@ -63,11 +65,11 @@ test('swaps `min` and `max` if `min > max`', function(t) {
 test('supports large integer values', function(t) {
   t.plan(2);
 
-  var min = Math.pow(2, 31);
-  var max = Math.pow(2, 62);
+  const min = Math.pow(2, 31);
+  const max = Math.pow(2, 62);
 
   t.ok(every(array, function() {
-    var result = aleaRandom(min, max);
+    const result = aleaRandom(min, max);
     return result >= min && result <= max;
   }));
 
@@ -84,16 +86,16 @@ test('coerces arguments to numbers', function(t) {
 
 test('supports floats', function(t) {
   t.plan(2);
-  var min = 1.5;
-  var max = 1.6;
-  var actual = aleaRandom(min, max);
+  const min = 1.5;
+  const max = 1.6;
+  const actual = aleaRandom(min, max);
   t.ok(actual % 1);
   t.ok(actual >= min && actual <= max);
 });
 
 test('supports `floating` argument', function(t) {
   t.plan(3);
-  var actual = aleaRandom(true);
+  let actual = aleaRandom(true);
   t.ok(actual % 1 && actual >= 0 && actual <= 1);
 
   actual = aleaRandom(2, true);
@@ -105,9 +107,9 @@ test('supports `floating` argument', function(t) {
 
 test('works when used as a callback for `map`', function(t) {
   t.plan(1);
-  var array = [1, 2, 3];
-  var actual = map(array, aleaRandom);
-  var expected = map(array, constant(true));
+  const array = [1, 2, 3];
+  let actual = map(array, aleaRandom);
+  const expected = map(array, constant(true));
 
   actual = map(actual, function(result, index) {
     return result >= 0 && result <= array[index] && (result % 1) === 0;

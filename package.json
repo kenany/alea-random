@@ -9,7 +9,7 @@
   ],
   "repository": "KenanY/alea-random",
   "license": "MIT",
-  "author": "Kenan Yildirim <kenan@kenany.me> (http://kenany.me/)",
+  "author": "Kenan Yildirim <kenan@kenany.me> (https://kenany.me/)",
   "main": "index.js",
   "files": [
     "index.js",
@@ -17,6 +17,9 @@
   ],
   "directories": {
     "test": "test"
+  },
+  "engines": {
+    "node": "12 || 14 || >=16"
   },
   "scripts": {
     "lint": "eslint *.js test/*.js",
@@ -34,22 +37,21 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@kenan/eslint-config": "9.0.4",
-    "@kenan/renovate-config": "1.5.1",
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/git": "10.0.1",
-    "browserify": "17.0.0",
-    "conventional-changelog-conventionalcommits": "4.6.1",
+    "@kenan/eslint-config": "^9.0.4",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "browserify": "^17.0.0",
+    "conventional-changelog-conventionalcommits": "^4.6.1",
     "eslint": "^7.32.0",
-    "lodash.constant": "3.0.0",
-    "lodash.every": "4.6.0",
-    "lodash.isfunction": "3.0.9",
-    "lodash.map": "4.6.0",
-    "lodash.some": "4.6.0",
-    "lodash.uniq": "4.5.0",
-    "nyc": "15.1.0",
+    "lodash.constant": "^3.0.0",
+    "lodash.every": "^4.6.0",
+    "lodash.isfunction": "^3.0.9",
+    "lodash.map": "^4.6.0",
+    "lodash.some": "^4.6.0",
+    "lodash.uniq": "^4.5.0",
+    "nyc": "^15.1.0",
     "semantic-release": "^18.0.0",
-    "tape-run": "9.0.0",
-    "tape": "5.3.2"
+    "tape-run": "^9.0.0",
+    "tape": "^5.3.2"
   }
 }

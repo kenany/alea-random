@@ -1,6 +1,8 @@
-var Alea = require('alea');
-var isIterateeCall = require('lodash._isiterateecall');
-var toNumber = require('lodash.tonumber');
+'use strict';
+
+const Alea = require('alea');
+const isIterateeCall = require('lodash._isiterateecall');
+const toNumber = require('lodash.tonumber');
 const { v4: uuid } = require('uuid');
 
 /**
@@ -32,7 +34,7 @@ const { v4: uuid } = require('uuid');
  * // => a floating-point number between 1.2 and 5.2
  */
 function aleaRandom(min, max, floating) {
-  var gen = new Alea(uuid());
+  const gen = new Alea(uuid());
 
   if (floating && typeof floating !== 'boolean' && isIterateeCall(min, max, floating)) {
     max = floating = undefined;
@@ -65,13 +67,13 @@ function aleaRandom(min, max, floating) {
   }
 
   if (min > max) {
-    var temp = min;
+    const temp = min;
     min = max;
     max = temp;
   }
 
   if (floating || min % 1 || max % 1) {
-    var rand = gen();
+    const rand = gen();
     return Math.min(min + (rand * (max - min + parseFloat('1e-' + ((rand + '').length - 1)))), max);
   }
 
