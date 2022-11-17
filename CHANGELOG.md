@@ -1,3 +1,14 @@
+## [4.0.0](https://github.com/KenanY/alea-random/compare/3.0.0...4.0.0) (2022-11-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v12 is no longer supported.
+
+### Features
+
+* drop Node.js v12 support ([b8fc425](https://github.com/KenanY/alea-random/commit/b8fc425c7a3e3d94490f17e967788ae9887d802e))
+
 ## [3.0.0](https://github.com/KenanY/alea-random/compare/2.1.6...3.0.0) (2022-01-03)
 
 
