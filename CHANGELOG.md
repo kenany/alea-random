@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/KenanY/alea-random/compare/4.0.0...4.0.1) (2022-11-17)
+
+
+### Bug Fixes
+
+* **deps:** uuid@9.0.0 ([d9fc910](https://github.com/KenanY/alea-random/commit/d9fc9107f4500ec4083351e511098a8e2e849e4f))
+
 ## [4.0.0](https://github.com/KenanY/alea-random/compare/3.0.0...4.0.0) (2022-11-17)
 
 
