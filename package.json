@@ -50,7 +50,7 @@
     "lodash.some": "^4.6.0",
     "lodash.uniq": "^4.5.0",
     "nyc": "^15.1.0",
-    "semantic-release": "^21.0.1",
+    "semantic-release": "^21.0.2",
     "tape-run": "^10.0.0",
     "tape": "^5.6.3"
   }
