@@ -1,3 +1,14 @@
+## [5.0.0](https://github.com/kenany/alea-random/compare/4.0.1...5.0.0) (2023-09-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v14 and v16 are no longer supported.
+
+### Features
+
+* drop Node.js v14 and v16 ([a855882](https://github.com/kenany/alea-random/commit/a855882f979942c69141f26e37b6725a4500e233))
+
 ## [4.0.1](https://github.com/KenanY/alea-random/compare/4.0.0...4.0.1) (2022-11-17)
 
 
