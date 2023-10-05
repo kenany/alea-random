@@ -34,7 +34,7 @@
     "alea": "^1.0.1",
     "lodash._isiterateecall": "^3.0.9",
     "lodash.tonumber": "^4.0.3",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@kenan/eslint-config": "^10.0.2",
