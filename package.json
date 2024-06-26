@@ -49,7 +49,7 @@
     "lodash.map": "^4.6.0",
     "lodash.some": "^4.6.0",
     "lodash.uniq": "^4.5.0",
-    "nyc": "^15.1.0",
+    "nyc": "^17.0.0",
     "semantic-release": "^24.0.0",
     "tape-run": "^11.0.0",
     "tape": "^5.7.5"
