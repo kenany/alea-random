@@ -1,3 +1,9 @@
+## [5.0.3](https://github.com/kenany/alea-random/compare/5.0.2...5.0.3) (2024-12-04)
+
+### Bug Fixes
+
+* **deps:** uuid@11.0.3 ([0c4b890](https://github.com/kenany/alea-random/commit/0c4b890d146f584d51a684c6463674b04e0569f6))
+
 ## [5.0.2](https://github.com/kenany/alea-random/compare/5.0.1...5.0.2) (2024-06-26)
 
 ### Bug Fixes
