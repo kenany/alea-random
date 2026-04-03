@@ -33,7 +33,7 @@
   "dependencies": {
     "alea": "^1.0.1",
     "lodash._isiterateecall": "^3.0.9",
-    "lodash.tonumber": "^4.0.3",
+    "lodash.tonumber": "^4.18.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
