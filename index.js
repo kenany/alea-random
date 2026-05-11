@@ -1,5 +1,3 @@
-'use strict';
-
 const Alea = require('alea');
 const isIterateeCall = require('lodash._isiterateecall');
 const toNumber = require('lodash.tonumber');
@@ -36,7 +34,11 @@ const { v4: uuid } = require('uuid');
 function aleaRandom(min, max, floating) {
   const gen = new Alea(uuid());
 
-  if (floating && typeof floating !== 'boolean' && isIterateeCall(min, max, floating)) {
+  if (
+    floating &&
+    typeof floating !== 'boolean' &&
+    isIterateeCall(min, max, floating)
+  ) {
     max = floating = undefined;
   }
 
@@ -44,8 +46,7 @@ function aleaRandom(min, max, floating) {
     if (typeof max === 'boolean') {
       floating = max;
       max = undefined;
-    }
-    else if (typeof min === 'boolean') {
+    } else if (typeof min === 'boolean') {
       floating = min;
       min = undefined;
     }
@@ -54,14 +55,12 @@ function aleaRandom(min, max, floating) {
   if (min === undefined && max === undefined) {
     min = 0;
     max = 1;
-  }
-  else {
+  } else {
     min = toNumber(min) || 0;
     if (max === undefined) {
       max = min;
       min = 0;
-    }
-    else {
+    } else {
       max = toNumber(max) || 0;
     }
   }
@@ -74,7 +73,11 @@ function aleaRandom(min, max, floating) {
 
   if (floating || min % 1 || max % 1) {
     const rand = gen();
-    return Math.min(min + (rand * (max - min + parseFloat('1e-' + ((rand + '').length - 1)))), max);
+    return Math.min(
+      min +
+        rand * (max - min + Number.parseFloat(`1e-${(`${rand}`).length - 1}`)),
+      max
+    );
   }
 
   return min + Math.floor(gen() * (max - min + 1));
