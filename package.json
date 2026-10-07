@@ -24,7 +24,7 @@
   "engines": {
     "node": "22 || >=24"
   },
-  "packageManager": "pnpm@12.5.1",
+  "packageManager": "pnpm@12.9.1",
   "scripts": {
     "lint": "biome check .",
     "tests-only": "tape test/index.js",
