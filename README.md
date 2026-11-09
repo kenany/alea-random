@@ -5,7 +5,7 @@ instead of `Math.random`.
 
 ## Example
 
-``` javascript
+```javascript
 var aleaRandom = require('alea-random');
 
 aleaRandom(0, 5);
@@ -23,13 +23,13 @@ aleaRandom(1.2, 5.2);
 
 ## Installation
 
-``` bash
+```bash
 $ npm install alea-random
 ```
 
 ## API
 
-``` javascript
+```javascript
 var aleaRandom = require('alea-random');
 ```
 
